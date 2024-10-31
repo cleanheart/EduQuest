@@ -1,0 +1,21 @@
+.title-span-color {
+  color: $primary-color;
+}
+.flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}

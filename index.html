@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduQuest</title>
+
+    <!-- Assential CSS file-->
+
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <!-- <link rel="stylesheet" href="assets/css/slick-theme.css" /> -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Assential Google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section start Hare -->
+    <header>
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="top">
+            <div class="left">
+              <p>Welcome to our Education</p>
+              <a href="mailto:debra.holt@example.com">
+                <span class="icon"
+                  ><svg
+                    width="15"
+                    height="10"
+                    viewBox="0 0 15 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.9722 0H1.25C0.562167 0 0 0.559694 0 1.25V8.75C0 9.44056 0.562528 10 1.25 10H12.9722C13.6601 10 14.2222 9.44031 14.2222 8.75V1.25C14.2222 0.559528 13.6598 0 12.9722 0ZM12.7803 0.833333C12.3761 1.23881 7.62903 6.00139 7.434 6.19706C7.27111 6.36044 6.9512 6.36056 6.78822 6.19706L1.44194 0.833333H12.7803ZM0.833333 8.59681V1.40319L4.41847 5L0.833333 8.59681ZM1.44194 9.16667L5.00678 5.59022L6.19803 6.78536C6.68619 7.27511 7.53622 7.27492 8.02422 6.78536L9.21547 5.59025L12.7803 9.16667H1.44194ZM13.3889 8.59681L9.80375 5L13.3889 1.40319V8.59681Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+                <span class="text">debra.holt@example.com</span>
+              </a>
+              <a href="mailto:debra.holt@example.com">
+                <span class="icon"
+                  ><i class="fa-solid fa-location-dot"></i>
+                </span>
+                <span class="text"
+                  >2118 Thornridge Cir. Syracuse, Connecticut 35624</span
+                >
+              </a>
+            </div>
+            <div class="right">
+              <a class="hidden-icon" href="#"
+                ><i class="fa-regular fa-envelope"></i
+              ></a>
+              <a class="hidden-icon" href="#"
+                ><i class="fa-solid fa-location-dot"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="logo-wrapper">
+              <a href="index.html">
+                <img src="assets/images/logo.png" alt="logo" />
+              </a>
+            </div>
+            <div class="bottom-right">
+              <div class="menu-wrapper">
+                <ul>
+                  <li>
+                    <a class="active" href="#"
+                      >home
+                      <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >about us
+                      <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      >course
+                      <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                    </a>
+                  </li>
+                  <li><a href="#">pages </a></li>
+                  <li>
+                    <a href="#"
+                      >blog
+                      <span class="icon"><i class="fa-solid fa-plus"></i></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lang-wrapper">
+                <a href="#">
+                  <span class="icon"
+                    ><svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.9963 9.1405e-05C17.0303 -0.012738 21.99 4.92225 21.9998 10.963C22.0096 17.0343 17.1626 21.9332 11.1237 21.9992C5.00701 22.0658 0.0307356 17.1791 0.000112213 11.0766C-0.0305111 4.93508 4.87839 0.0135317 10.9963 9.1405e-05ZM6.81378 8.07519C6.52715 10.0411 6.52286 11.9826 6.81501 13.9204C9.61948 13.9204 12.3958 13.9204 15.1856 13.9204C15.4716 11.9625 15.4759 10.021 15.1819 8.07519C12.3817 8.07519 9.6103 8.07519 6.81378 8.07519ZM14.8677 6.59127C14.8603 6.54301 14.8585 6.50513 14.8493 6.46909C14.5841 5.43725 14.2209 4.4439 13.6752 3.52508C13.2777 2.85613 12.8061 2.24949 12.1361 1.82612C11.4024 1.36244 10.6527 1.33556 9.91469 1.79924C9.63969 1.97213 9.38123 2.18534 9.15401 2.4181C8.43191 3.15792 7.97073 4.06208 7.60999 5.01816C7.41767 5.52828 7.26701 6.05367 7.09123 6.59188C9.71503 6.59127 12.2874 6.59127 14.8677 6.59127ZM7.12798 15.4123C7.13533 15.4599 7.13716 15.4984 7.14696 15.5345C7.42196 16.6036 7.80169 17.6311 8.38047 18.5762C8.76264 19.2006 9.21587 19.7639 9.84058 20.1652C10.6135 20.6625 11.403 20.6741 12.1581 20.1542C12.5054 19.9148 12.8227 19.613 13.0995 19.2928C13.6899 18.6098 14.0837 17.8059 14.3943 16.9634C14.5798 16.4594 14.7323 15.9426 14.9057 15.4117C12.2806 15.4123 9.70829 15.4123 7.12798 15.4123ZM5.28752 8.0758C5.2814 8.07519 5.252 8.06908 5.22321 8.06908C4.17773 8.06847 3.13164 8.07213 2.08617 8.06419C1.94408 8.06297 1.90794 8.12834 1.87425 8.23952C1.49636 9.49007 1.36223 10.7669 1.52637 12.0626C1.60599 12.6925 1.76279 13.3126 1.88099 13.918C3.07285 13.918 4.19733 13.918 5.28629 13.918C5.23362 12.9356 5.14053 11.9692 5.14114 11.0027C5.14114 10.0307 5.23424 9.05876 5.28752 8.0758ZM20.0706 13.9278C20.6886 11.9686 20.6916 10.0203 20.07 8.08191C18.9149 8.08191 17.7953 8.08191 16.6555 8.08191C16.939 10.0381 16.9292 11.9808 16.6592 13.9278C17.8185 13.9278 18.9394 13.9278 20.0706 13.9278ZM14.5504 2.15968C14.5866 2.24582 14.5927 2.26843 14.6043 2.28675C15.4471 3.56846 16.0357 4.95768 16.3572 6.45748C16.3903 6.61265 16.4791 6.60227 16.5881 6.60166C17.4358 6.60044 18.2834 6.60105 19.1304 6.60105C19.2254 6.60105 19.3203 6.60105 19.452 6.60105C18.33 4.54042 16.7271 3.08217 14.5504 2.15968ZM14.6105 19.8194C16.7296 18.9183 18.3355 17.4601 19.4502 15.4031C18.4439 15.4031 17.4823 15.4007 16.5207 15.4105C16.4662 15.4111 16.3842 15.5052 16.3627 15.5711C16.1416 16.2517 15.9781 16.9549 15.7043 17.6128C15.3926 18.3618 14.9859 19.0717 14.6105 19.8194ZM7.43727 19.839C7.41155 19.762 7.4091 19.7461 7.40114 19.7339C6.5541 18.4461 5.95878 17.0514 5.63724 15.543C5.60355 15.3854 5.50984 15.4025 5.40328 15.4025C4.50969 15.4031 3.61672 15.4025 2.72313 15.4031C2.67475 15.4031 2.62636 15.4099 2.55042 15.416C3.66816 17.465 5.27098 18.9226 7.43727 19.839ZM2.54368 6.60105C3.54812 6.60105 4.50234 6.5986 5.45656 6.6041C5.59069 6.60471 5.61641 6.5424 5.64091 6.43121C5.96429 4.9644 6.5345 3.60022 7.35581 2.34174C7.38154 2.30264 7.39807 2.25804 7.44707 2.16029C5.26792 3.08339 3.66449 4.54104 2.54368 6.60105Z"
+                        fill="#4A5355"
+                      />
+                    </svg>
+                  </span>
+                  Eng</a
+                >
+                <a class="cart-icon" href="#"
+                  ><svg
+                    width="16"
+                    height="21"
+                    viewBox="0 0 16 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.93727 4.99458C3.84932 3.62299 4.23786 2.45458 5.24652 1.53499C5.99467 0.852531 6.88643 0.504067 7.89899 0.50017C9.09524 0.495717 10.1045 0.943822 10.9066 1.83057C11.711 2.71954 12.0004 3.7872 11.9208 4.99402C12.1825 4.99402 12.4229 4.98957 12.6634 4.99514C13.0096 5.00293 13.362 4.98066 13.701 5.03744C14.5861 5.18607 15.2524 5.91918 15.307 6.8126C15.3905 8.18475 15.4467 9.55801 15.5124 10.9313C15.6059 12.8868 15.6977 14.8423 15.7896 16.7984C15.8152 17.3395 15.8453 17.8805 15.8575 18.4216C15.8848 19.595 15.0114 20.4951 13.8341 20.4968C9.89683 20.5012 5.9596 20.5012 2.02237 20.4968C0.838922 20.4957 -0.0467174 19.5816 0.00171169 18.3993C0.08688 16.3319 0.192088 14.2656 0.288389 12.1993C0.363538 10.5906 0.43646 8.98132 0.513835 7.3726C0.526638 7.10262 0.532761 6.82819 0.58787 6.56601C0.781586 5.64475 1.57037 5.00738 2.50889 4.99681C2.9737 4.99013 3.43739 4.99458 3.93727 4.99458ZM7.91847 19.1642C9.87679 19.1642 11.8351 19.1647 13.7934 19.1636C14.2721 19.163 14.5393 18.8836 14.5232 18.4049C14.516 18.1828 14.5082 17.9607 14.4976 17.7386C14.3918 15.4986 14.2855 13.2581 14.1797 11.0181C14.1168 9.6866 14.0589 8.35453 13.9899 7.02358C13.9643 6.52816 13.7016 6.2977 13.2134 6.29993C12.2064 6.30494 11.1994 6.30939 10.193 6.31217C7.6652 6.31885 5.13798 6.32442 2.6102 6.33054C2.15541 6.33166 1.89991 6.56378 1.87152 7.02246C1.83756 7.56965 1.81975 8.11795 1.79414 8.66626C1.64273 11.8915 1.49021 15.1162 1.33936 18.3414C1.31319 18.9053 1.56369 19.1636 2.12702 19.1636C4.05695 19.1642 5.98799 19.1642 7.91847 19.1642ZM10.5849 4.98456C10.6812 3.80279 10.3266 2.83254 9.29564 2.21633C8.34097 1.6452 7.35458 1.67749 6.43164 2.30038C5.48867 2.93608 5.17694 3.87292 5.27603 4.98456C7.04564 4.98456 8.80523 4.98456 10.5849 4.98456Z"
+                      fill="#4A5355"
+                    />
+                    <path
+                      d="M7.93498 11.7083C6.06573 11.7072 4.46701 10.4475 4.03004 8.63281C3.95934 8.33945 3.99775 8.07783 4.24324 7.88022C4.45699 7.70765 4.70136 7.68984 4.94907 7.79393C5.18732 7.89413 5.28585 8.09898 5.34987 8.34001C5.6332 9.406 6.30899 10.0879 7.38667 10.3373C8.75438 10.654 10.1482 9.80011 10.5123 8.4441C10.534 8.36395 10.5513 8.28212 10.5774 8.20363C10.691 7.85628 11.0222 7.67091 11.384 7.74996C11.7158 7.82232 11.944 8.15186 11.8806 8.50645C11.8416 8.72299 11.7759 8.93785 11.6969 9.14382C11.1007 10.703 9.62053 11.7094 7.93498 11.7083Z"
+                      fill="#4A5355"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="btn-wrapper">
+                <button class="btn-1">apply now</button>
+              </div>
+              <div class="mobile-menu-icon" id="menuIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End Hare -->
+
+    <!-- Hero Section start hare -->
+    <section class="hero-area">
+      <div class="hero-victor-1">
+        <img src="assets/images/hero-dot-img-1.png" alt="" />
+      </div>
+      <div class="hero-victor-2">
+        <img src="assets/images/hero-dot-img-2.png" alt="" />
+      </div>
+      <span class="hero-side-shape-1">
+        <img src="assets/images/hero-shape-1.png" alt="" />
+      </span>
+      <span class="hero-side-shape-2">
+        <img src="assets/images/hero-shape-2.png" alt="" />
+      </span>
+      <div class="container">
+        <div class="content-wrapper hero-slider">
+          <div class="slider-inner">
+            <div class="top">
+              <div class="title">
+                <h1>
+                  Empower Your Learning Journey Courses
+                  <span class="title-span-color"> - Online Academy</span> Today
+                </h1>
+              </div>
+
+              <div class="circle-container">
+                <div class="circle-img">
+                  <img src="assets/images/carcle-img.png" alt="" />
+                </div>
+                <div class="circle-text">
+                  <img src="assets/images/circle-text.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="hero-bottom-img">
+                <img src="assets/images/hero-img.png" alt="" />
+                <!-- <div class="video-btn">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div> -->
+                <!-- ভিডিও বাটন -->
+                <div class="video-btn" id="videoButton">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+
+                <!-- ভিডিও পপআপ -->
+                <div id="videoPopup" class="popup">
+                  <span id="closeIcon" class="close-icon">&times;</span>
+                  <iframe
+                    id="youtubeVideo"
+                    width="560"
+                    height="315"
+                    src=""
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="hero-btm-text">
+                <h6 class="title">Eduquest Platform</h6>
+                <div class="des">
+                  <p>
+                    Discover a cutting-edge educational platform providing
+                    personalized learning experiences, interactive courses, and
+                    expert guidance, all tailored to your unique goals and
+                    preferences. Unlock your full potential today
+                  </p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn-2">
+                    Explore Courses
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-icon-wrapper">
+              <div class="title">
+                <h6>
+                  Get your team access to Eduquest top
+                  <span class="title-span-color">22,000+ courses</span>
+                </h6>
+              </div>
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img src="assets/images/hero-icon-1.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-2.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-3.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-4.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-5.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-6.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-inner">
+            <div class="top">
+              <div class="title">
+                <h1>
+                  Empower Your Learning Journey Courses
+                  <span class="title-span-color"> - Online Academy</span> Today
+                </h1>
+              </div>
+
+              <div class="circle-container">
+                <div class="circle-img">
+                  <img src="assets/images/carcle-img.png" alt="" />
+                </div>
+                <div class="circle-text">
+                  <img src="assets/images/circle-text.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="hero-bottom-img">
+                <img src="assets/images/hero-img.png" alt="" />
+                <div class="video-btn">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="hero-btm-text">
+                <h6 class="title">Eduquest Platform</h6>
+                <div class="des">
+                  <p>
+                    Discover a cutting-edge educational platform providing
+                    personalized learning experiences, interactive courses, and
+                    expert guidance, all tailored to your unique goals and
+                    preferences. Unlock your full potential today
+                  </p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn-2">
+                    Explore Courses
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-icon-wrapper">
+              <div class="title">
+                <h6>
+                  Get your team access to Eduquest top
+                  <span class="title-span-color">22,000+ courses</span>
+                </h6>
+              </div>
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img src="assets/images/hero-icon-1.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-2.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-3.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-4.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-5.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-6.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-inner">
+            <div class="top">
+              <div class="title">
+                <h1>
+                  Empower Your Learning Journey Courses
+                  <span class="title-span-color"> - Online Academy</span> Today
+                </h1>
+              </div>
+
+              <div class="circle-container">
+                <div class="circle-img">
+                  <img src="assets/images/carcle-img.png" alt="" />
+                </div>
+                <div class="circle-text">
+                  <img src="assets/images/circle-text.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="hero-bottom-img">
+                <img src="assets/images/hero-img.png" alt="" />
+                <div class="video-btn">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="hero-btm-text">
+                <h6 class="title">Eduquest Platform</h6>
+                <div class="des">
+                  <p>
+                    Discover a cutting-edge educational platform providing
+                    personalized learning experiences, interactive courses, and
+                    expert guidance, all tailored to your unique goals and
+                    preferences. Unlock your full potential today
+                  </p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn-2">
+                    Explore Courses
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-icon-wrapper">
+              <div class="title">
+                <h6>
+                  Get your team access to Eduquest top
+                  <span class="title-span-color">22,000+ courses</span>
+                </h6>
+              </div>
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img src="assets/images/hero-icon-1.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-2.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-3.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-4.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-5.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-6.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-inner">
+            <div class="top">
+              <div class="title">
+                <h1>
+                  Empower Your Learning Journey Courses
+                  <span class="title-span-color"> - Online Academy</span> Today
+                </h1>
+              </div>
+
+              <div class="circle-container">
+                <div class="circle-img">
+                  <img src="assets/images/carcle-img.png" alt="" />
+                </div>
+                <div class="circle-text">
+                  <img src="assets/images/circle-text.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="hero-bottom-img">
+                <img src="assets/images/hero-img.png" alt="" />
+                <div class="video-btn">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="hero-btm-text">
+                <h6 class="title">Eduquest Platform</h6>
+                <div class="des">
+                  <p>
+                    Discover a cutting-edge educational platform providing
+                    personalized learning experiences, interactive courses, and
+                    expert guidance, all tailored to your unique goals and
+                    preferences. Unlock your full potential today
+                  </p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn-2">
+                    Explore Courses
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-icon-wrapper">
+              <div class="title">
+                <h6>
+                  Get your team access to Eduquest top
+                  <span class="title-span-color">22,000+ courses</span>
+                </h6>
+              </div>
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img src="assets/images/hero-icon-1.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-2.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-3.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-4.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-5.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-6.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="slider-inner">
+            <div class="top">
+              <div class="title">
+                <h1>
+                  Empower Your Learning Journey Courses
+                  <span class="title-span-color"> - Online Academy</span> Today
+                </h1>
+              </div>
+
+              <div class="circle-container">
+                <div class="circle-img">
+                  <img src="assets/images/carcle-img.png" alt="" />
+                </div>
+                <div class="circle-text">
+                  <img src="assets/images/circle-text.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bottom">
+              <div class="hero-bottom-img">
+                <img src="assets/images/hero-img.png" alt="" />
+                <div class="video-btn">
+                  <span class="icon-wrapper">
+                    <span class="icon">
+                      <svg
+                        width="13"
+                        height="16"
+                        viewBox="0 0 13 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.5 7.13397C13.1667 7.51888 13.1667 8.48112 12.5 8.86602L2 14.9282C1.33333 15.3131 0.499999 14.832 0.499999 14.0622L0.5 1.93782C0.5 1.16802 1.33333 0.686896 2 1.0718L12.5 7.13397Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="hero-btm-text">
+                <h6 class="title">Eduquest Platform</h6>
+                <div class="des">
+                  <p>
+                    Discover a cutting-edge educational platform providing
+                    personalized learning experiences, interactive courses, and
+                    expert guidance, all tailored to your unique goals and
+                    preferences. Unlock your full potential today
+                  </p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="btn-2">
+                    Explore Courses
+                    <span class="icon">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-icon-wrapper">
+              <div class="title">
+                <h6>
+                  Get your team access to Eduquest top
+                  <span class="title-span-color">22,000+ courses</span>
+                </h6>
+              </div>
+              <div class="icon-wrapper">
+                <a href="#">
+                  <img src="assets/images/hero-icon-1.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-2.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-3.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-4.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-5.png" alt="" />
+                </a>
+                <a href="#">
+                  <img src="assets/images/hero-icon-6.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section end hare -->
+
+    <!-- Categori Section Start hare -->
+    <section class="categori-area">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class=" heading-title-wrapper">
+            <div class="title">
+              <span class="border"> </span>
+              <h2>
+                Most Popular <span class="title-span-color"> Categories</span>
+              </h2>
+            </div>
+            <div class="categori-des">
+              <p>
+                Explore our comprehensive education to empower learners of all
+                ages. Discover interactive lessons, expert guidance, and
+                personalized learning pathways today. Unlock your potential with
+                us!
+              </p>
+            </div>
+            <div class="btn">
+              <a href="#"> <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+          </div>
+          <div class="categori-inner-wrapper">
+            <div class="categori-inner">
+              <div class="title-wrapper">
+                <div class="icon">
+                  <img src="assets/images/categori-icon-1.png" alt="" />
+                </div>
+                <div class="title">
+                  <h6>Web Development</h6>
+                </div>
+              </div>
+              <div class="des">
+                <p>
+                  Discover a cutting-edge educational platform offering
+                  interactive lessons, personalized learning, and expert
+                  guidance to unleash your full potential and excel
+                  academically."
+                </p>
+              </div>
+
+              <div class="read-more-btn">
+                <button>
+                  read more
+                  <span class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="categori-inner">
+              <div class="title-wrapper">
+                <div class="icon">
+                  <img src="assets/images/categori-icon-1.png" alt="" />
+                </div>
+                <div class="title">
+                  <h6>UI/UX Design</h6>
+                </div>
+              </div>
+              <div class="des">
+                <p>
+                  An education platform offering diverse courses, personalized
+                  learning paths, interactive lessons, and expert guidance to
+                  empower learners of all ages and backgrounds
+                </p>
+              </div>
+
+              <div class="read-more-btn">
+                <button>
+                  read more
+                  <span class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="categori-inner">
+              <div class="title-wrapper">
+                <div class="icon">
+                  <img src="assets/images/categori-icon-3.png" alt="" />
+                </div>
+                <div class="title">
+                  <h6>Digital Marketing</h6>
+                </div>
+              </div>
+              <div class="des">
+                <p>
+                  Education platform: A comprehensive online hub offering
+                  diverse courses, personalized learning paths, interactive
+                  resources, and expert guidance for learners of all levels and
+                  interests.
+                </p>
+              </div>
+
+              <div class="read-more-btn">
+                <button>
+                  read more
+                  <span class="icon">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Categori Section End hare -->
+
+    <!-- Footer Section start Hare -->
+    <footer>
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="top">
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End Hare -->
+
+    <!--Assential JS file-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

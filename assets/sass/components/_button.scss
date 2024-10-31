@@ -1,0 +1,41 @@
+.btn-1 {
+  box-sizing: border-box;
+  border: none;
+  background: $primary-color;
+  padding: 14px 22px;
+  font-weight: 600;
+  color: $white-color;
+  border-radius: 8px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  border: 2px solid $primary-color;
+
+  &:hover {
+    background: transparent;
+    color: $primary-color;
+  }
+}
+.btn-2 {
+  box-sizing: border-box;
+  border: none;
+  background: $primary-color;
+  padding: 14px 26px;
+  font-weight: 700;
+  color: $white-color;
+  border-radius: 8px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  border: 2px solid $primary-color;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .icon {
+    display: inline-block;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background: transparent;
+    color: $primary-color;
+  }
+}
