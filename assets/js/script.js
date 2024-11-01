@@ -29,25 +29,17 @@ $(".hero-slider").slick({
 });
 
 // video popup
-const youtubeLink = "https://www.youtube.com/embed/oPkLFZWxtz4?autoplay=1";
-
-// বাটন ও পপআপ এলিমেন্ট খুঁজে বের করুন
-const videoButton = document.getElementById("videoButton");
-const videoPopup = document.getElementById("videoPopup");
-const youtubeVideo = document.getElementById("youtubeVideo");
-const closeIcon = document.getElementById("closeIcon");
-
-// বাটনে ক্লিক করলে পপআপ ও ভিডিও চালু হবে
-videoButton.addEventListener("click", () => {
-  videoPopup.classList.add("active");
-  youtubeVideo.src = youtubeLink; // ভিডিও URL সেট করা হয়েছে
-});
-
-// বন্ধ আইকনে ক্লিক করলে পপআপ ধীরে ধীরে বন্ধ হবে
-closeIcon.addEventListener("click", () => {
-  videoPopup.classList.add("fade-out");
-  setTimeout(() => {
-    videoPopup.classList.remove("active", "fade-out");
-    youtubeVideo.src = ""; // ভিডিও বন্ধ করার জন্য src খালি করা হয়েছে
-  }, 400); // 0.4 সেকেন্ড পরে পপআপ বন্ধ
+$(function () {
+  // video popup
+  $(".video-btn a").magnificPopup({
+    type: "iframe",
+    iframe: {
+      patterns: {
+        youtube: {
+          index: "youtube.com/",
+          src: "https://www.youtube.com/embed/%id%?autoplay=1", // URL that will be set as a source for iframe.
+        },
+      },
+    },
+  });
 });

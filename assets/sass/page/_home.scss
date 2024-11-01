@@ -297,118 +297,79 @@
             border-radius: 8px;
           }
           .video-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: -40px;
+            @extend .flex-center-center;
             width: 80px;
             height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: 50%;
             background: $white-color;
-            box-shadow: 2px 2px 36px rgba(0, 0, 0, 0.17);
+            position: absolute;
+            top: 135px;
+            right: -38px;
             padding: 16px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            animation: pulse 1.5s ease-out infinite;
 
-            &:hover {
-              transform: translateY(-50%) scale(1.1);
-            }
-
-            &::before {
-              content: "";
-              position: absolute;
+            a {
+              display: inline-block;
+              background: $primary-color;
               width: 100%;
               height: 100%;
               border-radius: 50%;
-              background: rgba($primary-color, 0.4);
-              animation: pulse 1.5s ease-out infinite;
-            }
-
-            .icon-wrapper {
-              position: relative;
-              width: 48px;
-              height: 48px;
+              text-align: center;
               display: flex;
               align-items: center;
               justify-content: center;
-              border-radius: 50%;
-              background: $primary-color;
-              flex-shrink: 0;
             }
 
             .icon svg {
               fill: white;
+              animation: icon-pulse 1.5s ease-out infinite;
             }
 
+            // Pulse animation for button shadow
+            @keyframes pulse {
+              0% {
+                box-shadow: 0 0 0 0 rgba($primary-color, 0.7),
+                  0 0 0 10px rgba($primary-color, 0.5),
+                  0 0 0 20px rgba($primary-color, 0.3),
+                  0 0 0 30px rgba($primary-color, 0.1);
+                transform: scale(1);
+              }
+              70% {
+                box-shadow: 0 0 0 5px rgba($primary-color, 0.1),
+                  0 0 0 15px rgba($primary-color, 0.05),
+                  0 0 0 25px rgba($primary-color, 0.03),
+                  0 0 0 35px rgba($primary-color, 0.01);
+                transform: scale(1.1);
+              }
+              100% {
+                box-shadow: 0 0 0 0 rgba($primary-color, 0),
+                  0 0 0 10px rgba($primary-color, 0),
+                  0 0 0 20px rgba($primary-color, 0),
+                  0 0 0 30px rgba($primary-color, 0);
+                transform: scale(1);
+              }
+            }
+
+            // Icon pulse animation
+            @keyframes icon-pulse {
+              0%,
+              100% {
+                transform: scale(1);
+              }
+              50% {
+                transform: scale(1.1);
+              }
+            }
             @include respond-to("large") {
-              left: 50%;
+              right: 45%;
+              top: 50%;
             }
-            @include respond-to("medium") {
-              width: 60px;
-              height: 60px;
-              left: 40%;
-            }
-          }
-
-          .popup {
-            display: none;
-            position: fixed;
-            top: 41%;
-            left: 14%;
-            transform: translate(-50%, -50%) scale(0.8);
-            width: 60%;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            z-index: 1000;
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            opacity: 0;
-
-            &.active {
-              display: block;
-              opacity: 1;
-              transform: translate(-50%, -50%) scale(1);
-              width: 619px;
-            }
-
-            .close-icon {
-              position: absolute;
-              top: 10px;
-              right: 15px;
-              font-size: 24px;
-              cursor: pointer;
-              color: $secondery-dark-color;
-              transition: color 0.2s ease;
-
-              &:hover {
-                color: $primary-color;
-              }
-            }
-
-            @include respond-to("medium") {
-              width: 90%;
-              padding: 15px;
-
-              .close-icon {
-                top: 8px;
-                right: 10px;
-                font-size: 20px;
-              }
-            }
-
             @include respond-to("small") {
-              width: 95%;
-              padding: 10px;
-
-              .close-icon {
-                top: 5px;
-                right: 8px;
-                font-size: 18px;
-              }
+              padding: 8px;
+              width: 50px;
+              height: 50px;
+              right: 41%;
+              top: 38%;
             }
           }
 
@@ -536,7 +497,7 @@
     padding: 90px 20px 120px 20px !important;
   }
   @include respond-to("small") {
-    padding: 52px 20px 40px 16px !important;
+    padding: 72px 20px 40px 16px !important;
   }
 }
 
@@ -689,7 +650,7 @@
 
 /********* Learning Section Start hare  *********/
 .learning-area {
-  padding: 193px 20px 120px 20px;
+  padding: 193px 20px 390px 20px;
   background: url("../../../assets/images/learning-bg.png");
   background-size: cover;
   .start-area {
@@ -827,6 +788,7 @@
 
   .course-area {
     margin-top: 120px;
+    position: relative;
     .title-wrapper {
       text-align: center;
       p {
@@ -1022,21 +984,96 @@
           }
         }
       }
-      .last-inner {
-        position: relative;
-        &::after {
-          position: absolute;
-          content: "";
-          right: -70px;
-          bottom: -60px;
-          width: 150px;
-          height: 150px;
-          background: url("../../../assets/images/circle-bg-img.png");
-          background-size: cover;
-          z-index: -1;
+    }
+
+    .img-video-wrapper {
+      margin-top: 120px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      img {
+        border-radius: 8px;
+      }
+      .video-btn {
+        @extend .flex-center-center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: $white-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 16px;
+        animation: pulse 1.5s ease-out infinite;
+
+        a {
+          display: inline-block;
+          background: $primary-color;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .icon svg {
+          fill: white;
+          animation: icon-pulse 1.5s ease-out infinite;
+        }
+
+        // Pulse animation for button shadow
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba($primary-color, 0.7),
+              0 0 0 10px rgba($primary-color, 0.5),
+              0 0 0 20px rgba($primary-color, 0.3),
+              0 0 0 30px rgba($primary-color, 0.1);
+            transform: scale(1);
+          }
+          70% {
+            box-shadow: 0 0 0 5px rgba($primary-color, 0.1),
+              0 0 0 15px rgba($primary-color, 0.05),
+              0 0 0 25px rgba($primary-color, 0.03),
+              0 0 0 35px rgba($primary-color, 0.01);
+            transform: scale(1.1);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba($primary-color, 0),
+              0 0 0 10px rgba($primary-color, 0),
+              0 0 0 20px rgba($primary-color, 0),
+              0 0 0 30px rgba($primary-color, 0);
+            transform: scale(1);
+          }
+        }
+
+        // Icon pulse animation
+        @keyframes icon-pulse {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+        }
+        @include respond-to("small") {
+          padding: 8px;
+          width: 50px;
+          height: 50px;
         }
       }
+
+      @include respond-to("large") {
+        margin-top: 60px;
+      }
+      @include respond-to("small") {
+        margin-top: 0px;
+      }
     }
+
     @include respond-to("xlarge") {
       margin-top: 100px;
       .course-inner-wrapper {
@@ -1074,8 +1111,160 @@
       }
     }
   }
+
   @include respond-to("large") {
     padding-top: 100px;
   }
 }
 /********* Learning Section End hare  *********/
+
+/********* Events Section Start Hare   *********/
+.Events-area {
+  padding: 490px 0 120px 0;
+  background: url("../../../assets/images/events-bg.png");
+  background-color: rgba(238, 239, 252, 1);
+
+  .title-wrapper {
+    text-align: center;
+    p {
+      max-width: 828px;
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+  }
+  .events-inner-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    .inner {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 24px 24px 35px 24px;
+      background: $white-color;
+      z-index: 2;
+
+      .logo-wrapper {
+        width: 203px;
+        position: relative;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+        .logo-date {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 61px;
+          height: 61px;
+          border-radius: 50%;
+          @extend .flex-center-center;
+          flex-direction: column;
+          background: rgba(82, 95, 225, 1);
+          border: 1px solid rgba(82, 95, 225, 1);
+          transition: 0.3s;
+          h6 {
+            font-family: $manrope-font;
+            color: $white-color;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 26.57px;
+          }
+          .text {
+            font-size: 8px;
+            font-weight: 500;
+            line-height: 12px;
+            font-family: $dm-sans-font;
+            color: $white-color;
+          }
+        }
+      }
+      .text-wrapper {
+        margin-left: 40px;
+        h4 {
+          max-width: 510px;
+        }
+        .time-user {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 16px;
+          .time {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .icon {
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            .text {
+              font-size: 14px;
+              line-height: 24px;
+              font-weight: 500;
+              color: rgba(74, 83, 85, 1);
+            }
+          }
+        }
+      }
+      .btn-wrapper {
+        margin-left: auto;
+        .btn-1 {
+          color: $white-color;
+          background: rgba(29, 33, 79, 1);
+          border: 1px solid rgba(29, 33, 79, 1);
+          font-family: $manrope-font;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 800;
+          padding: 16px 40px;
+        }
+      }
+      &:hover {
+        .logo-wrapper {
+          .logo-date {
+            background: $primary-color;
+            border: 1px solid $white-color;
+          }
+        }
+        .btn-wrapper {
+          .btn-1 {
+            background: $primary-color;
+            color: $white-color;
+            border: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+    .active-inner {
+      position: relative;
+      z-index: 2;
+      .logo-wrapper {
+        .logo-date {
+          background: $primary-color;
+          border: 1px solid $white-color;
+        }
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 95px;
+        height: 95px;
+        top: -45px;
+        right: -45px;
+        background: url(../../../assets/images/events-inner-shape.png);
+        background-size: cover;
+        display: inline-block;
+        z-index: -1;
+      }
+      @include respond-to("xxxlarge") {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/********* Events Section End Hare   *********/
