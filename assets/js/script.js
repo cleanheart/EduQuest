@@ -42,4 +42,19 @@ $(function () {
       },
     },
   });
+
+  //happy student slider
+  $(".happy-student-slider-wrapper").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoPlay: true,
+
+    prevArrow:
+      '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+    nextArrow:
+      '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+  });
 });

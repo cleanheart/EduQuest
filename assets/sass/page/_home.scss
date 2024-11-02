@@ -1059,6 +1059,10 @@
             transform: scale(1.1);
           }
         }
+        @include respond-to("large") {
+          top: 45%;
+          left: 46%;
+        }
         @include respond-to("small") {
           padding: 8px;
           width: 50px;
@@ -1070,7 +1074,7 @@
         margin-top: 60px;
       }
       @include respond-to("small") {
-        margin-top: 0px;
+        margin-top: 40px;
       }
     }
 
@@ -1113,14 +1117,14 @@
   }
 
   @include respond-to("large") {
-    padding-top: 100px;
+    padding: 100px 20px 190px 20px;
   }
 }
 /********* Learning Section End hare  *********/
 
 /********* Events Section Start Hare   *********/
 .Events-area {
-  padding: 490px 0 120px 0;
+  padding: 490px 20px 120px 20px;
   background: url("../../../assets/images/events-bg.png");
   background-color: rgba(238, 239, 252, 1);
 
@@ -1212,6 +1216,7 @@
       .btn-wrapper {
         margin-left: auto;
         .btn-1 {
+          width: 176px;
           color: $white-color;
           background: rgba(29, 33, 79, 1);
           border: 1px solid rgba(29, 33, 79, 1);
@@ -1235,6 +1240,16 @@
             color: $white-color;
             border: 1px solid $primary-color;
           }
+        }
+      }
+      @include respond-to("medium") {
+        flex-direction: column;
+        gap: 20px;
+        .text-wrapper {
+          margin-left: 0;
+        }
+        .btn-wrapper {
+          margin-left: 0;
         }
       }
     }
@@ -1265,6 +1280,293 @@
         }
       }
     }
+    p {
+      margin-top: 24px;
+      font-family: $dm-sans-font;
+      font-weight: 400;
+      .primary-color {
+        color: $primary-color;
+        font-family: $manrope-font;
+        font-weight: 800;
+      }
+    }
+  }
+  @include respond-to("large") {
+    padding: 390px 20px 120px 20px;
+  }
+  @include respond-to("medium") {
+    padding: 290px 20px 120px 20px;
+  }
+  @include respond-to("small") {
+    padding: 40px 20px 40px 20px;
+    .title-wrapper {
+      h2 {
+        font-size: 24px;
+        line-height: 35px;
+      }
+    }
   }
 }
 /********* Events Section End Hare   *********/
+
+/********* Expart Section Start Hare   *********/
+.expart-area {
+  padding: 120px 20px;
+  background: url("../../../assets/images/expart-bg.png");
+  .expart-wrapper {
+    .title {
+      text-align: center;
+      p {
+        max-width: 807px;
+        margin: 0 auto;
+        margin-top: 16px;
+      }
+      @include respond-to("small") {
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+    .expart-inner-wrapper {
+      margin-top: 40px;
+      @extend .flex-center-between;
+      gap: 24px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 67%;
+        left: -200px;
+        width: 150px;
+        height: 150px;
+        background: url("../../../assets/images/circle-bg-img.png");
+        @include respond-to("xxxlarge") {
+          display: none;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 79.5%;
+        left: -153px;
+        width: 60px;
+        height: 60px;
+        background: url("../../../assets/images/hero-dot-img-2.png");
+        background-repeat: no-repeat;
+        @include respond-to("xxxlarge") {
+          display: none;
+        }
+      }
+      .inner {
+        padding: 24px 24px 19px 24px;
+        background: $white-color;
+        border-radius: 8px;
+        width: 25%;
+        transition: 0.3s;
+        cursor: pointer;
+        .icon-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-left: 45%;
+          margin-top: -16px;
+          a {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            border: 2px solid $white-color;
+            background: $primary-color;
+            @extend .flex-center-center;
+            color: $white-color;
+            transition: 0.3s;
+          }
+          .nil-color {
+            background: rgba(82, 95, 225, 1);
+          }
+          .hide-icon {
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+        .text-wrapper {
+          text-align: center;
+          margin-top: 12px;
+          h6 {
+            font-size: 22px;
+            margin-bottom: 8px;
+          }
+        }
+        &:hover {
+          background: #ffffff;
+          box-shadow: 12px 12px 48px rgba(0, 0, 0, 0.12);
+          .icon-wrapper {
+            .hide-icon {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      .active-inner {
+        background: #ffffff;
+        box-shadow: 12px 12px 48px rgba(0, 0, 0, 0.12);
+        .icon-wrapper {
+          .hide-icon {
+            opacity: 1 !important;
+            visibility: visible !important;
+          }
+        }
+      }
+      @include respond-to("xlarge") {
+        flex-wrap: wrap;
+        .inner {
+          width: calc(50% - 15px);
+        }
+      }
+      @include respond-to("small") {
+        .inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .happy-student-slider {
+    margin-top: 120px;
+    .happy-student-slider-wrapper {
+      margin-top: 65px;
+      position: relative;
+
+      .slick-arrow {
+        background: #fef1e6;
+        box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.25);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        color: #000;
+        border: none;
+        position: absolute;
+        top: -150px;
+        @include respond-to("medium") {
+          top: -100px;
+        }
+        @include respond-to("small") {
+          display: none !important;
+        }
+      }
+      .slick-prev {
+        right: 68px;
+      }
+      .slick-next {
+        background: $primary-color;
+        color: $white-color;
+        right: 0;
+      }
+      .slider-box {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        .img-wrapperr {
+          position: relative;
+          width: 308px;
+          height: 371px;
+          background: rgba(229, 231, 251, 1);
+          border-radius: 11px;
+          flex-shrink: 0;
+
+          .shape-1 {
+            display: inline-block;
+            position: absolute;
+            left: 13px;
+            top: 10px;
+            width: 308px;
+            height: 371px;
+            border-radius: 11px;
+            background: rgba(238, 231, 251, 1);
+
+            .shap-2 {
+              position: absolute;
+              left: 13px;
+              top: 10px;
+              width: 308px;
+              height: 371px;
+              border-radius: 11px;
+              background: rgba(229, 231, 251, 1);
+              img {
+                border-radius: 11px;
+              }
+            }
+          }
+          @include respond-to("small") {
+            width: 345px;
+          }
+        }
+        .text-wrapper {
+          margin-left: 40px;
+          max-width: 810px;
+          img {
+            width: 25px;
+          }
+          h6 {
+            font-size: 22px;
+          }
+          .icon-text {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
+            .icon {
+              img {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                border: 1px solid $primary-color;
+              }
+            }
+            .text {
+              h6 {
+                font-size: 18px !important;
+                line-height: 28px;
+                margin-bottom: 4px;
+              }
+              p {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include respond-to("medium") {
+      margin-top: 40px;
+      .title {
+        h2 {
+          font-size: 30px;
+          line-height: 45px;
+        }
+      }
+      .happy-student-slider-wrapper {
+        margin-top: 30px;
+        .slider-box {
+          flex-direction: column;
+          gap: 20px;
+          .text-wrapper {
+            margin-left: 0px;
+            margin-top: 20px;
+            h6 {
+              font-size: 18px;
+            }
+            .icon-text {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include respond-to("medium") {
+    padding: 60px 20px;
+  }
+}
+/********* Expart Section End Hare   *********/
