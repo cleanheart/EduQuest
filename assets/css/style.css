@@ -559,9 +559,10 @@ footer {
           color: white;
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
-          transition: 0.3s; }
+          transition: 0.3s;
+          z-index: 9; }
           footer .winged-wrapper .logo-wrapper .icon-title-wrapper .icon-wrapper a:hover {
-            background: #f86f03; }
+            background: #f86f03 !important; }
         footer .winged-wrapper .logo-wrapper .icon-title-wrapper .icon-wrapper .active {
           background: #f86f03; }
     footer .winged-wrapper .nav-winged {
@@ -2042,7 +2043,7 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../../../assets/images/registation-bg-.png");
+    background: url("../../assets/images/registation-bg-.png");
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -2205,7 +2206,7 @@ footer {
     .latest-news .blog-wrapper .left {
       border-radius: 8px;
       width: 50%;
-      background: url("../../../assets/images/last-news.png");
+      background: url("../../assets/images/last-news.png");
       background-repeat: no-repeat;
       background-size: cover;
       display: -webkit-box;
@@ -2226,7 +2227,7 @@ footer {
         height: 100%;
         top: 0;
         left: 0;
-        background: url("../../../assets/images/last-img-before.png");
+        background: url("../../assets/images/last-img-before.png");
         background-size: cover;
         z-index: 1; }
       .latest-news .blog-wrapper .left .title-wrapper {

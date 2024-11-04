@@ -143,8 +143,9 @@ footer {
             @extend .flex-center-center;
             color: $white-color;
             transition: 0.3s;
+            z-index: 9;
             &:hover {
-              background: $primary-color;
+              background: $primary-color !important;
             }
           }
           .active {
