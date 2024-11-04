@@ -52,6 +52,7 @@ header {
     }
     .bottom {
       @extend .flex-center-between;
+      // flex-wrap: wrap;
       background: $white-color;
       border-radius: 8px;
       padding: 20px 24px;
@@ -67,6 +68,7 @@ header {
           ul {
             gap: 32px;
             li {
+              padding: 5px 0;
               a {
                 @extend .flex-center;
                 color: $body-text-color;
@@ -76,14 +78,16 @@ header {
                 .icon {
                   font-size: 13px;
                 }
-                &:hover {
-                  color: $menu-hover-color;
-                  font-weight: 800;
-                }
               }
               a.active {
                 color: $menu-hover-color;
                 font-weight: 800;
+              }
+              &:hover {
+                a {
+                  color: $menu-hover-color;
+                  font-weight: 800;
+                }
               }
             }
           }
@@ -147,6 +151,40 @@ header {
             }
           }
         }
+      }
+      .mobile-menu-wrapper {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        position: absolute;
+        left: 30%;
+        right: 30%;
+        top: 100%;
+        background: $white-color;
+        z-index: 5;
+        max-width: 360px;
+        border-radius: 8px;
+        box-shadow: $box-shadow;
+        ul {
+          padding: 24px;
+          flex-direction: column;
+          justify-content: center;
+          li {
+            margin-top: 10px;
+            border-bottom: 1px solid $border-color;
+            a {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      .mobile-menu-wrapper.menu-show {
+        visibility: visible;
+        opacity: 1;
+      }
+      .menu-show {
+        visibility: visible;
+        opacity: 1;
       }
     }
   }

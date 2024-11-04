@@ -1247,6 +1247,24 @@
         gap: 20px;
         .text-wrapper {
           margin-left: 0;
+          h4 {
+            font-size: 25px;
+            line-height: 32px;
+          }
+          .time-user {
+            gap: 15px;
+            .time {
+              .icon {
+                img {
+                  width: 18px;
+                  height: 18px;
+                }
+              }
+              .text {
+                font-size: 12px;
+              }
+            }
+          }
         }
         .btn-wrapper {
           margin-left: 0;
@@ -1301,8 +1319,8 @@
     padding: 40px 20px 40px 20px;
     .title-wrapper {
       h2 {
-        font-size: 24px;
-        line-height: 35px;
+        font-size: 30px;
+        line-height: 45px;
       }
     }
   }
@@ -1570,3 +1588,323 @@
   }
 }
 /********* Expart Section End Hare   *********/
+
+/********* registration Section start Hare  *********/
+.registration-area {
+  padding: 158px 20px;
+  // background: url("../../../assets/images/registation-bg-.png");
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/images/registation-bg-.png");
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .content-wrapper {
+    position: relative;
+    .title-wrapper {
+      width: 50%;
+      h2 {
+        color: $white-color;
+        @include respond-to("small") {
+          font-size: 30px;
+          line-height: 32px;
+        }
+      }
+      p {
+        max-width: 519px;
+        margin-top: 16px;
+        color: $white-color;
+      }
+    }
+
+    .registration-form {
+      margin-left: 20px;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      max-width: 560px;
+      padding: 48px 24px 40px 24px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.14);
+      border-radius: 8px;
+
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 24px;
+          border: 1px solid rgba(230, 232, 233, 1);
+          border-radius: 4px;
+          font-size: 16px;
+          color: #000;
+          outline: none;
+          @include respond-to("small") {
+            margin-bottom: 16px;
+            padding: 8px;
+            font-size: 14px;
+          }
+        }
+
+        .input-group {
+          display: flex;
+          gap: 10px;
+
+          input {
+            width: calc(50% - 10px);
+          }
+          @include respond-to("small") {
+            flex-direction: column;
+            input {
+              width: 100%;
+            }
+          }
+        }
+
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+      }
+      .btn-wrapper {
+        margin-top: 14px;
+      }
+      @include respond-to("large") {
+        position: inherit;
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
+    @include respond-to("large") {
+      .title-wrapper {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @include respond-to("small") {
+    padding: 40px 20px;
+  }
+}
+/********* registration Section end Hare  *********/
+
+/*********  news Section start Hare  *********/
+.latest-news {
+  padding: 60px 20px 120px 20px;
+  background: url(../../../assets/images/expart-bg.png);
+  .count-down-wrapper {
+    display: flex;
+    gap: 88px;
+    align-items: center;
+    .count-inner {
+      text-align: center;
+      h2 {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 700;
+        font-family: $primary-font;
+        .count {
+          font-family: $primary-font;
+        }
+      }
+      h6 {
+        font-size: 19.5px;
+        line-height: 40px;
+      }
+    }
+    @include respond-to("xxlarge") {
+      width: 50%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    @include respond-to("large") {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0;
+    }
+    @include respond-to("medium") {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+  .main-heading-wrapper {
+    margin: 0 auto;
+    margin-top: 198px;
+    max-width: 770px;
+    text-align: center;
+    h2 {
+      margin-bottom: 16px;
+    }
+    @include respond-to("large") {
+      margin-top: 100px;
+    }
+    @include respond-to("small") {
+      margin-top: 40px;
+      h2 {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    }
+  }
+  .blog-wrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    .left {
+      border-radius: 8px;
+      width: 50%;
+      background: url("../../../assets/images/last-news.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url("../../../assets/images/last-img-before.png");
+        background-size: cover;
+        z-index: 1;
+      }
+
+      .title-wrapper {
+        z-index: 2;
+        margin-bottom: 16px;
+        padding-left: 24px;
+        h6 {
+          color: $white-color;
+          margin-bottom: 8px;
+          font-size: 18px;
+          line-height: 26px;
+        }
+        h3 {
+          color: $white-color;
+        }
+      }
+      .icon-with-text {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-left: 24px;
+        padding-bottom: 40px;
+        ul {
+          gap: 8px;
+          .text {
+            font-size: 14px;
+
+            color: $white-color;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .right {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      .inner {
+        width: calc(50% - 12px);
+        background: #ffffff;
+        box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        .img-wrapper {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            content: "BRANDING";
+            padding: 6px 22px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            background: $primary-color;
+            z-index: 2;
+            color: $white-color;
+          }
+        }
+        .title {
+          font-size: 17px;
+          line-height: 26px;
+          font-weight: 700;
+          margin: 16px 0 8px 0;
+          padding-left: 12px;
+          padding-right: 7px;
+          max-width: 280px;
+          color: rgba(29, 33, 79, 1);
+        }
+        .icon-with-text {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding-left: 12px;
+          padding-bottom: 25px;
+          ul {
+            gap: 8px;
+            .text {
+              font-size: 14px;
+
+              color: $primary-color;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    @include respond-to("large") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+        padding-top: 500px;
+      }
+      .right {
+        width: 100%;
+      }
+    }
+    @include respond-to("small") {
+      flex-direction: column;
+      .left {
+        width: 100%;
+        padding-top: 200px;
+      }
+      .right {
+        flex-direction: column;
+        .inner {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    padding: 40px 20px 40px 20px;
+  }
+}
+/*********  news Section end Hare  *********/

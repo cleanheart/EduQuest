@@ -14,22 +14,22 @@ menuIcon.addEventListener("click", function () {
   mobileMenuWrapper.classList.toggle("menu-show");
 });
 
-//slick slider for itesm slider area
-
-$(".hero-slider").slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true,
-  autoPlay: true,
-
-  prevArrow: '<button class="slick-prev">Prev</button>',
-  nextArrow: '<button class="slick-next">Next</button>',
-});
-
 // video popup
 $(function () {
+  //slick slider for itesm slider area
+
+  $(".hero-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoPlay: true,
+
+    prevArrow: '<button class="slick-prev">Prev</button>',
+    nextArrow: '<button class="slick-next">Next</button>',
+  });
+
   // video popup
   $(".video-btn a").magnificPopup({
     type: "iframe",
@@ -56,5 +56,11 @@ $(function () {
       '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
     nextArrow:
       '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+  });
+
+  //counter up
+  $(".count").counterUp({
+    dely: 10,
+    time: 1000,
   });
 });
