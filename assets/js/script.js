@@ -30,6 +30,43 @@ $(function () {
     nextArrow: '<button class="slick-next">Next</button>',
   });
 
+  $(".hero-icon-slider").slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 6,
+    speed: 300,
+    autoPlay: true,
+    arrows: false,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // video popup
   $(".video-btn a").magnificPopup({
     type: "iframe",
@@ -63,4 +100,9 @@ $(function () {
     dely: 10,
     time: 1000,
   });
+});
+
+//footer
+document.querySelector(".newsletter").addEventListener("click", function () {
+  document.querySelector(".email-input").focus();
 });

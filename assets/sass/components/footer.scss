@@ -24,6 +24,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid rgba(26, 67, 79, 1);
+    margin-bottom: 100px;
     .title-top {
       h2 {
         color: $white-color;
@@ -32,27 +35,29 @@ footer {
     .right {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 40px;
       .newsletter {
         background-color: $secondery-dark-color;
         width: 334px;
         color: #dcdce8;
+        z-index: 5;
 
         .email-label {
           font-size: 16px;
           font-weight: 500;
           display: block;
+          // width: 100%;
         }
 
         .email-input {
-          width: 100%;
           border: none;
           border-bottom: 1px solid #dcdce8;
           background: transparent;
           outline: none;
           color: $white-color;
           font-size: 16px;
-
+          z-index: 5;
+          width: 100%;
           &:focus {
             background: transparent;
             border-bottom: 1px solid #ffffff;
@@ -67,13 +72,25 @@ footer {
         }
       }
       .btn-wrapper {
+        z-index: 5;
         .btn-1 {
           padding: 14px 40px;
+          transition: 0.3s;
+          &:hover {
+            background: transparent !important;
+          }
+        }
+      }
+      @include respond-to("small") {
+        .newsletter {
+          width: 100%;
         }
       }
     }
 
     @include respond-to("large") {
+      padding-bottom: 50px;
+      margin-bottom: 50px;
       flex-wrap: wrap;
       .title-top {
         h2 {
@@ -84,13 +101,6 @@ footer {
       .right {
         flex-wrap: wrap;
       }
-    }
-  }
-  hr {
-    color: rgba(26, 67, 79, 1);
-    margin: 52px 0 100px 0;
-    @include respond-to("large") {
-      margin: 25px 0 50px 0;
     }
   }
 
@@ -105,7 +115,10 @@ footer {
     gap: 40px;
     .logo-wrapper {
       max-width: 411px;
+      z-index: 5;
       .logo {
+        cursor: pointer;
+        z-index: 3;
         img {
           max-width: 226px;
         }
@@ -178,6 +191,7 @@ footer {
       }
     }
     .recent-post-winged {
+      z-index: 3;
       max-width: 380px;
       .title {
         h6 {
@@ -189,6 +203,17 @@ footer {
         display: flex;
         align-items: center;
         gap: 22px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          box-shadow: $box-shadow;
+          .text {
+            p {
+              color: $primary-color;
+            }
+          }
+        }
         .img-wrapper {
           img {
             width: 88px;
@@ -201,6 +226,7 @@ footer {
             font-size: 16px;
             font-weight: 800;
             color: rgba(230, 232, 233, 1);
+            transition: 0.3s;
           }
           ul {
             margin-top: 16px;
@@ -250,6 +276,7 @@ footer {
     gap: 25px;
     p {
       color: rgba(255, 255, 255, 1);
+      cursor: pointer;
     }
     .copy-right {
       p {
@@ -262,6 +289,11 @@ footer {
       gap: 20px;
       p {
         font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
   }

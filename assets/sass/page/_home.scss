@@ -1,21 +1,7 @@
 .hero-area {
   padding: 140px 20px 120px 20px;
   position: relative;
-  .hero-victor-1 {
-    position: absolute;
-    top: 60px;
-    left: 160px;
-    @extend .flex-center-center;
-    width: 108px;
-    height: 68px;
-    background: url("../../assets/images/dot-shape.png");
-    img {
-      width: 73px;
-    }
-    @include respond-to("large") {
-      display: none;
-    }
-  }
+
   .hero-victor-2 {
     position: absolute;
     bottom: 230px;
@@ -45,10 +31,26 @@
     z-index: -1;
   }
   .container {
+    position: relative;
+    .hero-victor-1 {
+      position: absolute;
+      top: -78px;
+      left: 0;
+      @extend .flex-center-center;
+      width: 108px;
+      height: 68px;
+      background: url("../../assets/images/dot-shape.png");
+      img {
+        width: 73px;
+      }
+      @include respond-to("large") {
+        display: none;
+      }
+    }
     .content-wrapper {
       position: relative;
-
       .slick-arrow {
+        z-index: 3;
         border: none;
         background: transparent;
         color: $secondery-dark-color;
@@ -57,15 +59,22 @@
         position: absolute;
         transition: 0.3s;
         cursor: pointer;
+        top: 87%;
         &:hover {
           color: $primary-color !important;
         }
         @include respond-to("small") {
           display: none !important;
         }
+        @include respond-to("xlarge") {
+          top: 95%;
+          margin-top: 20px;
+        }
+        @include respond-to("large") {
+          top: 71%;
+        }
       }
       .slick-prev {
-        top: 68%;
         left: 59%;
         &::after {
           content: "";
@@ -94,11 +103,7 @@
             left: calc(100% + 5px);
           }
         }
-        @include respond-to("xlarge") {
-          top: 73%;
-        }
         @include respond-to("large") {
-          top: 61%;
           left: 74%;
           &:after {
             width: 100px;
@@ -110,7 +115,6 @@
           }
         }
         @include respond-to("medium") {
-          top: 59%;
           left: 74%;
           &:after {
             display: none;
@@ -121,17 +125,13 @@
         }
       }
       .slick-next {
-        top: 68%;
         left: 79%;
         @include respond-to("xlarge") {
-          top: 73%;
         }
         @include respond-to("large") {
-          top: 61%;
           left: 94%;
         }
         @include respond-to("medium") {
-          top: 59%;
           left: 94%;
         }
       }
@@ -253,12 +253,13 @@
           }
           @include respond-to("large") {
             right: 0;
-            top: 103px;
+            top: 180px;
             width: 150px;
             height: 150px;
             z-index: 1;
           }
           @include respond-to("small") {
+            display: none;
             right: 0;
             top: 105px;
             width: 100px;
@@ -296,6 +297,7 @@
           img {
             border-radius: 8px;
           }
+
           .video-btn {
             @extend .flex-center-center;
             width: 80px;
@@ -307,6 +309,7 @@
             right: -38px;
             padding: 16px;
             animation: pulse 1.5s ease-out infinite;
+            cursor: pointer;
 
             a {
               display: inline-block;
@@ -318,11 +321,15 @@
               display: flex;
               align-items: center;
               justify-content: center;
-            }
-
-            .icon svg {
-              fill: white;
-              animation: icon-pulse 1.5s ease-out infinite;
+              .icon {
+                flex-shrink: 0;
+                padding: 13px 20px;
+                border-radius: 50%;
+                background: $primary-color;
+                color: $white-color;
+                display: block;
+                // animation: icon-pulse 1.5s ease-out infinite;
+              }
             }
 
             // Pulse animation for button shadow
@@ -361,8 +368,8 @@
               }
             }
             @include respond-to("large") {
-              right: 45%;
-              top: 50%;
+              left: 46%;
+              top: 46%;
             }
             @include respond-to("small") {
               padding: 8px;
@@ -372,52 +379,6 @@
               top: 38%;
             }
           }
-
-          // .video-btn {
-          //   position: absolute;
-          //   top: 50%;
-          //   transform: translateY(-50%);
-          //   right: -40px;
-          //   width: 80px;
-          //   height: 80px;
-          //   display: flex;
-          //   align-items: center;
-          //   justify-content: center;
-          //   border-radius: 50%;
-          //   background: $white-color;
-          //   box-shadow: 2px 2px 36px rgba(0, 0, 0, 0.17);
-          //   padding: 16px;
-          //   cursor: pointer;
-          //   transition: transform 0.3s ease;
-
-          //   &:hover {
-          //     transform: translateY(-50%) scale(1.1);
-          //   }
-          //   &::before {
-          //     content: "";
-          //     position: absolute;
-          //     width: 100%;
-          //     height: 100%;
-          //     border-radius: 50%;
-          //     background: rgba($primary-color, 0.4);
-          //     animation: pulse 1.5s ease-out infinite;
-          //   }
-
-          //   .icon-wrapper {
-          //     position: relative;
-          //     width: 48px;
-          //     height: 48px;
-          //     display: flex;
-          //     align-items: center;
-          //     justify-content: center;
-          //     border-radius: 50%;
-          //     background: $primary-color;
-          //   }
-
-          //   .icon svg {
-          //     fill: white;
-          //   }
-          // }
         }
         .hero-btm-text {
           width: 38%;
@@ -472,22 +433,30 @@
           }
         }
         .icon-wrapper {
+          width: 100% !important;
           margin-top: 40px;
           @extend .flex-center-between;
           flex-wrap: wrap;
           a {
             cursor: pointer;
+            display: inline-block;
+            width: inherit !important;
+            img {
+              height: 37px;
+            }
           }
+          @include respond-to("small") {
+            justify-content: center !important;
+          }
+        }
+        .hero-icon-slider {
+          width: 100%;
         }
         @include respond-to("large") {
           margin-top: 40px;
           .icon-wrapper {
-            margin-top: 10px;
+            margin-top: 40px;
             justify-content: center;
-            gap: 20px;
-            a {
-              margin-top: 24px;
-            }
           }
         }
       }
@@ -504,11 +473,22 @@
 /********* Categori Section Start hare *********/
 .categori-area {
   padding: 120px 20px;
-  background: url("../../../assets/images/cetagory-bg.png");
+  background: url("../../assets/images/cetagory-bg.png");
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: repeat;
   background-color: rgba(238, 239, 252, 1);
+  position: relative;
+  .category-shape {
+    position: absolute;
+    bottom: 113px;
+    right: 30px;
+    z-index: 1;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
 
   .heading-title-wrapper {
     display: flex;
@@ -555,6 +535,21 @@
       border-radius: 8px;
       width: 33%;
       padding: 32px 24px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: $box-shadow;
+        .read-more-btn {
+          button {
+            color: $primary-color;
+          }
+        }
+        .title {
+          h6 {
+            color: $primary-color;
+          }
+        }
+      }
       .title-wrapper {
         display: flex;
         justify-content: start;
@@ -571,6 +566,7 @@
         h6 {
           font-size: 22px;
           font-family: $secondery-inter-font;
+          transition: 0.3s;
         }
       }
       .des {
@@ -593,9 +589,6 @@
             }
           }
           cursor: pointer;
-          &:hover {
-            color: $primary-color;
-          }
         }
       }
     }
@@ -651,7 +644,7 @@
 /********* Learning Section Start hare  *********/
 .learning-area {
   padding: 193px 20px 390px 20px;
-  background: url("../../../assets/images/learning-bg.png");
+  background: url("../../assets/images/learning-bg.png");
   background-size: cover;
   .start-area {
     display: flex;
@@ -712,6 +705,22 @@
     .dubble-image-wrapper {
       display: flex;
       gap: 24px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -34px;
+        bottom: -30px;
+        width: 67px;
+        height: 67px;
+        background: url("../../assets/images/half-ball-shape.png");
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        @include respond-to("1380px") {
+          right: -15px;
+        }
+      }
       .img-box {
         display: flex;
         flex-direction: column;
@@ -743,7 +752,7 @@
           content: "";
           width: 108px;
           height: 68px;
-          background: url("../../../assets/images/dot-shape.png");
+          background: url("../../assets/images/dot-shape.png");
           background-size: cover;
           top: -33px;
           left: -33px;
@@ -802,15 +811,32 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
+      z-index: 3;
+      position: relative;
+      .inner-shape {
+        position: absolute;
+        bottom: -64px;
+        right: -82px;
+        width: 150px;
+        height: 150px;
+        z-index: -1;
+        @include respond-to("1500px") {
+          right: 0px;
+          width: 100px;
+          height: 100px;
+        }
+      }
       .inner {
+        z-index: 3;
         width: calc(50% - 12px);
         padding: 24px 33px 24px 24px;
         background: #ffffff;
-        box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
-        border-radius: 8px;
+        border-radius: 12px;
         display: flex;
         gap: 24px;
         cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid rgba(233, 233, 233, 1);
 
         .img-wrapper {
           border-radius: 8px;
@@ -832,6 +858,9 @@
             justify-content: center;
             transition: 0.3s;
             border-top-left-radius: 8px;
+          }
+          img {
+            border-radius: 8px;
           }
         }
         .text-wrapper {
@@ -932,6 +961,8 @@
           }
         }
         &:hover {
+          box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
+
           .img-wrapper {
             &::before {
               color: $white-color;
@@ -959,6 +990,7 @@
         }
       }
       .active {
+        box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
         .img-wrapper {
           &::before {
             color: $white-color;
@@ -991,6 +1023,17 @@
       position: absolute;
       top: 100%;
       left: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(8, 17, 50, 0.3);
+        z-index: 2;
+        top: 0%;
+        left: 0;
+        border-radius: 8px;
+      }
       img {
         border-radius: 8px;
       }
@@ -1006,6 +1049,7 @@
         transform: translate(-50%);
         padding: 16px;
         animation: pulse 1.5s ease-out infinite;
+        cursor: pointer;
 
         a {
           display: inline-block;
@@ -1017,11 +1061,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
-        }
 
-        .icon svg {
-          fill: white;
-          animation: icon-pulse 1.5s ease-out infinite;
+          .icon {
+            color: $white-color;
+          }
         }
 
         // Pulse animation for button shadow
@@ -1067,6 +1110,8 @@
           padding: 8px;
           width: 50px;
           height: 50px;
+          top: 33%;
+          left: 43%;
         }
       }
 
@@ -1075,6 +1120,7 @@
       }
       @include respond-to("small") {
         margin-top: 40px;
+        position: inherit;
       }
     }
 
@@ -1117,7 +1163,7 @@
   }
 
   @include respond-to("large") {
-    padding: 100px 20px 190px 20px;
+    padding: 100px 20px 100px 20px;
   }
 }
 /********* Learning Section End hare  *********/
@@ -1125,7 +1171,7 @@
 /********* Events Section Start Hare   *********/
 .Events-area {
   padding: 490px 20px 120px 20px;
-  background: url("../../../assets/images/events-bg.png");
+  background: url("../../assets/images/education-right-shape.png");
   background-color: rgba(238, 239, 252, 1);
 
   .title-wrapper {
@@ -1141,13 +1187,31 @@
     display: flex;
     flex-direction: column;
     gap: 13px;
+    position: relative;
+    z-index: 3;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 95px;
+      height: 95px;
+      top: -45px;
+      right: -45px;
+      background: url(../../assets/images/events-inner-shape.png);
+      background-size: cover;
+      display: inline-block;
+      z-index: 1;
+      @include respond-to("1500px") {
+        right: 0px;
+      }
+    }
     .inner {
       cursor: pointer;
       display: flex;
       align-items: center;
       padding: 24px 24px 35px 24px;
-      background: $white-color;
+      background: $white-color !important;
       z-index: 2;
+      border-radius: 8px;
 
       .logo-wrapper {
         width: 203px;
@@ -1272,29 +1336,11 @@
       }
     }
     .active-inner {
-      position: relative;
       z-index: 2;
       .logo-wrapper {
         .logo-date {
           background: $primary-color;
           border: 1px solid $white-color;
-        }
-      }
-      &::after {
-        position: absolute;
-        content: "";
-        width: 95px;
-        height: 95px;
-        top: -45px;
-        right: -45px;
-        background: url(../../../assets/images/events-inner-shape.png);
-        background-size: cover;
-        display: inline-block;
-        z-index: -1;
-      }
-      @include respond-to("xxxlarge") {
-        &::after {
-          display: none;
         }
       }
     }
@@ -1330,7 +1376,7 @@
 /********* Expart Section Start Hare   *********/
 .expart-area {
   padding: 120px 20px;
-  background: url("../../../assets/images/expart-bg.png");
+  background: url("../../assets/images/expart-bg.png");
   .expart-wrapper {
     .title {
       text-align: center;
@@ -1357,7 +1403,7 @@
         left: -200px;
         width: 150px;
         height: 150px;
-        background: url("../../../assets/images/circle-bg-img.png");
+        background: url("../../assets/images/circle-bg-img.png");
         @include respond-to("xxxlarge") {
           display: none;
         }
@@ -1369,7 +1415,7 @@
         left: -153px;
         width: 60px;
         height: 60px;
-        background: url("../../../assets/images/hero-dot-img-2.png");
+        background: url("../../assets/images/hero-dot-img-2.png");
         background-repeat: no-repeat;
         @include respond-to("xxxlarge") {
           display: none;
@@ -1523,6 +1569,7 @@
           max-width: 810px;
           img {
             width: 25px;
+            margin-bottom: 8px;
           }
           h6 {
             font-size: 22px;
@@ -1707,7 +1754,7 @@
 /*********  news Section start Hare  *********/
 .latest-news {
   padding: 60px 20px 120px 20px;
-  background: url(../../../assets/images/expart-bg.png);
+  background: url(../../assets/images/expart-bg.png);
   .count-down-wrapper {
     display: flex;
     gap: 88px;
@@ -1787,6 +1834,7 @@
         background: url("../../assets/images/last-img-before.png");
         background-size: cover;
         z-index: 1;
+        border-radius: 8px;
       }
 
       .title-wrapper {
@@ -1831,6 +1879,12 @@
         background: #ffffff;
         box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+          .title {
+            color: $primary-color;
+          }
+        }
         .img-wrapper {
           position: relative;
 
@@ -1859,6 +1913,7 @@
           padding-right: 7px;
           max-width: 280px;
           color: rgba(29, 33, 79, 1);
+          transition: 0.3s;
         }
         .icon-with-text {
           display: flex;
