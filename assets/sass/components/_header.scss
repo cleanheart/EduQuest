@@ -62,6 +62,7 @@ header {
       width: 100%;
       left: 0;
       top: 36px;
+      z-index: 3;
       .bottom-right {
         @extend .flex-center;
         .menu-wrapper {

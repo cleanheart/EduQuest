@@ -733,6 +733,9 @@
           border-radius: 8px;
           background: #ffffff;
           box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
+          img {
+            cursor: pointer;
+          }
         }
         .img-content-1 {
           align-self: end;
@@ -742,6 +745,9 @@
           border-radius: 8px;
           background: #ffffff;
           box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.15);
+          img {
+            cursor: pointer;
+          }
         }
       }
       .img-box-1 {
@@ -1050,6 +1056,7 @@
         padding: 16px;
         animation: pulse 1.5s ease-out infinite;
         cursor: pointer;
+        z-index: 3;
 
         a {
           display: inline-block;
@@ -1117,6 +1124,7 @@
 
       @include respond-to("large") {
         margin-top: 60px;
+        position: inherit;
       }
       @include respond-to("small") {
         margin-top: 40px;
@@ -1356,10 +1364,7 @@
     }
   }
   @include respond-to("large") {
-    padding: 390px 20px 120px 20px;
-  }
-  @include respond-to("medium") {
-    padding: 290px 20px 120px 20px;
+    padding: 120px 20px 120px 20px;
   }
   @include respond-to("small") {
     padding: 40px 20px 40px 20px;

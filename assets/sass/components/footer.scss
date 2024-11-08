@@ -7,6 +7,7 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
     img {
       max-width: 500px;
     }
@@ -15,6 +16,8 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 1;
+
     img {
       max-width: 500px;
     }
@@ -37,7 +40,6 @@ footer {
       align-items: center;
       gap: 40px;
       .newsletter {
-        background-color: $secondery-dark-color;
         width: 334px;
         color: #dcdce8;
         z-index: 5;
@@ -284,6 +286,7 @@ footer {
       }
     }
     .privecy {
+      z-index: 9;
       display: flex;
       align-items: center;
       gap: 20px;
