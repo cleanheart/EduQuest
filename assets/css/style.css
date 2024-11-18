@@ -360,12 +360,14 @@ header {
         -o-transition: 0.3s;
         transition: 0.3s;
         position: absolute;
-        left: 30%;
-        right: 30%;
+        left: 0;
         top: 100%;
-        background: white;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-size: cover;
         z-index: 5;
-        max-width: 360px;
+        width: 100%;
+        height: 100vh;
         border-radius: 8px;
         -webkit-box-shadow: 2px 2px 43px rgba(0, 0, 0, 0.12);
         box-shadow: 2px 2px 43px rgba(0, 0, 0, 0.12); }
@@ -379,10 +381,24 @@ header {
           -ms-flex-pack: center;
           justify-content: center; }
           header .content-wrapper .bottom .mobile-menu-wrapper ul li {
-            margin-top: 10px;
-            border-bottom: 1px solid #cccccc; }
-            header .content-wrapper .bottom .mobile-menu-wrapper ul li a {
+            padding: 15px 0;
+            border-bottom: 1px solid #cccccc;
+            position: relative; }
+            header .content-wrapper .bottom .mobile-menu-wrapper ul li::after {
+              font-family: "FontAwesome";
+              position: absolute;
+              font-size: 15px;
+              content: "\2b";
+              right: 0%;
+              -webkit-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              color: #1d214f; }
+            header .content-wrapper .bottom .mobile-menu-wrapper ul li:hover::after {
               color: #f86f03; }
+            header .content-wrapper .bottom .mobile-menu-wrapper ul li a {
+              color: #f86f03;
+              font-weight: 700; }
       header .content-wrapper .bottom .mobile-menu-wrapper.menu-show {
         visibility: visible;
         opacity: 1; }
@@ -1076,6 +1092,9 @@ footer {
               left: -118px; }
           .hero-area .container .content-wrapper .bottom .hero-btm-text .des {
             margin: 24px 0 48px 0; }
+          @media (max-width: 1200px) {
+            .hero-area .container .content-wrapper .bottom .hero-btm-text {
+              margin-right: 25px; } }
         @media (max-width: 992px) {
           .hero-area .container .content-wrapper .bottom {
             -webkit-box-orient: vertical;
@@ -1086,7 +1105,8 @@ footer {
             .hero-area .container .content-wrapper .bottom .hero-bottom-img {
               width: 100%; }
             .hero-area .container .content-wrapper .bottom .hero-btm-text {
-              width: 100%; }
+              width: 100%;
+              margin-right: 0px; }
               .hero-area .container .content-wrapper .bottom .hero-btm-text .des {
                 max-width: 500px; } }
         @media (max-width: 576px) {
@@ -1901,12 +1921,16 @@ footer {
           flex-direction: column;
           gap: 20px; }
           .Events-area .events-inner-wrapper .inner .text-wrapper {
-            margin-left: 0; }
+            margin-left: 0;
+            text-align: center; }
             .Events-area .events-inner-wrapper .inner .text-wrapper h4 {
               font-size: 25px;
               line-height: 32px; }
             .Events-area .events-inner-wrapper .inner .text-wrapper .time-user {
-              gap: 15px; }
+              gap: 15px;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center; }
               .Events-area .events-inner-wrapper .inner .text-wrapper .time-user .time .icon img {
                 width: 18px;
                 height: 18px; }
@@ -1935,7 +1959,9 @@ footer {
       padding: 40px 20px 40px 20px; }
       .Events-area .title-wrapper h2 {
         font-size: 30px;
-        line-height: 45px; } }
+        line-height: 45px; }
+      .Events-area p {
+        text-align: center; } }
 
 /********* Events Section End Hare   *********/
 /********* Expart Section Start Hare   *********/
@@ -2078,7 +2104,8 @@ footer {
         align-items: center;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+        padding: 0 10px; }
         .expart-area .happy-student-slider .happy-student-slider-wrapper .slider-box .img-wrapperr {
           position: relative;
           width: 308px;
@@ -2144,7 +2171,8 @@ footer {
         margin-top: 40px; }
         .expart-area .happy-student-slider .title h2 {
           font-size: 30px;
-          line-height: 45px; }
+          line-height: 45px;
+          text-align: center; }
         .expart-area .happy-student-slider .happy-student-slider-wrapper {
           margin-top: 30px; }
           .expart-area .happy-student-slider .happy-student-slider-wrapper .slider-box {
@@ -2157,7 +2185,9 @@ footer {
               margin-left: 0px;
               margin-top: 20px; }
               .expart-area .happy-student-slider .happy-student-slider-wrapper .slider-box .text-wrapper h6 {
-                font-size: 18px; }
+                font-size: 18px;
+                text-align: center;
+                padding: 0 5px; }
               .expart-area .happy-student-slider .happy-student-slider-wrapper .slider-box .text-wrapper .icon-text {
                 margin-top: 20px; } }
   @media (max-width: 768px) {
@@ -2190,11 +2220,15 @@ footer {
         @media (max-width: 576px) {
           .registration-area .content-wrapper .title-wrapper h2 {
             font-size: 30px;
-            line-height: 32px; } }
+            line-height: 32px;
+            text-align: center; } }
       .registration-area .content-wrapper .title-wrapper p {
         max-width: 519px;
         margin-top: 16px;
         color: white; }
+        @media (max-width: 576px) {
+          .registration-area .content-wrapper .title-wrapper p {
+            text-align: center; } }
     .registration-area .content-wrapper .registration-form {
       margin-left: 20px;
       position: absolute;

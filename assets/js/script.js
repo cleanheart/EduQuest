@@ -32,10 +32,10 @@ $(function () {
 
   $(".hero-icon-slider").slick({
     dots: false,
+    autoplay: true,
     infinite: true,
     slidesToShow: 6,
-    speed: 300,
-    autoPlay: true,
+    speed: 2000,
     arrows: false,
     slidesToScroll: 1,
     responsive: [
@@ -84,10 +84,10 @@ $(function () {
   $(".happy-student-slider-wrapper").slick({
     dots: false,
     infinite: true,
-    speed: 300,
+    speed: 1500,
     slidesToShow: 1,
     adaptiveHeight: true,
-    autoPlay: true,
+    autoplay: true,
 
     prevArrow:
       '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
