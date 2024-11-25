@@ -137,6 +137,18 @@ img {
     transform: scale(1.5);
     opacity: 0; } }
 
+@-webkit-keyframes theme_slideInDown {
+  0% {
+    top: -60px; }
+  100% {
+    top: 0; } }
+
+@keyframes theme_slideInDown {
+  0% {
+    top: -60px; }
+  100% {
+    top: 0; } }
+
 .title-span-color {
   color: #f86f03; }
 
@@ -246,6 +258,8 @@ header {
         font-weight: 600;
         gap: 8px; }
         header .content-wrapper .top .left a .icon {
+          -webkit-animation: 2s tada infinite;
+          animation: 2s tada infinite;
           width: 24px;
           height: 24px;
           background: #8890e9;
@@ -258,6 +272,8 @@ header {
       header .content-wrapper .top .right .hidden-icon {
         display: none; }
       header .content-wrapper .top .right a {
+        -webkit-animation: 2s tada infinite;
+        animation: 2s tada infinite;
         font-weight: 600;
         width: 24px;
         height: 24px;
@@ -361,17 +377,25 @@ header {
         transition: 0.3s;
         position: absolute;
         left: 0;
-        top: 100%;
+        top: 0;
         background-color: white;
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 5;
-        width: 100%;
+        width: 278px;
         height: 100vh;
         border-radius: 8px;
         -webkit-box-shadow: 2px 2px 43px rgba(0, 0, 0, 0.12);
-        box-shadow: 2px 2px 43px rgba(0, 0, 0, 0.12); }
-        header .content-wrapper .bottom .mobile-menu-wrapper ul {
+        box-shadow: 2px 2px 43px rgba(0, 0, 0, 0.12);
+        overflow: scroll; }
+        header .content-wrapper .bottom .mobile-menu-wrapper .mobile-logo {
+          width: 100%;
+          background: #1d214f;
+          text-align: center; }
+          header .content-wrapper .bottom .mobile-menu-wrapper .mobile-logo img {
+            width: 60%;
+            padding: 10px 5px; }
+        header .content-wrapper .bottom .mobile-menu-wrapper .mobile-nav {
           padding: 24px;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
@@ -380,11 +404,11 @@ header {
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center; }
-          header .content-wrapper .bottom .mobile-menu-wrapper ul li {
+          header .content-wrapper .bottom .mobile-menu-wrapper .mobile-nav li {
             padding: 15px 0;
             border-bottom: 1px solid #cccccc;
             position: relative; }
-            header .content-wrapper .bottom .mobile-menu-wrapper ul li::after {
+            header .content-wrapper .bottom .mobile-menu-wrapper .mobile-nav li::after {
               font-family: "FontAwesome";
               position: absolute;
               font-size: 15px;
@@ -394,10 +418,10 @@ header {
               -o-transition: 0.3s;
               transition: 0.3s;
               color: #1d214f; }
-            header .content-wrapper .bottom .mobile-menu-wrapper ul li:hover::after {
+            header .content-wrapper .bottom .mobile-menu-wrapper .mobile-nav li:hover::after {
               color: #f86f03; }
-            header .content-wrapper .bottom .mobile-menu-wrapper ul li a {
-              color: #f86f03;
+            header .content-wrapper .bottom .mobile-menu-wrapper .mobile-nav li a {
+              color: #1d214f;
               font-weight: 700; }
       header .content-wrapper .bottom .mobile-menu-wrapper.menu-show {
         visibility: visible;
@@ -405,6 +429,33 @@ header {
       header .content-wrapper .bottom .menu-show {
         visibility: visible;
         opacity: 1; }
+      header .content-wrapper .bottom .menu-search {
+        margin: 24px;
+        border-radius: 8px;
+        text-align: center; }
+        header .content-wrapper .bottom .menu-search input {
+          border: 2px solid #1d214f;
+          padding: 10px 5px;
+          width: 100%;
+          border-radius: 8px; }
+        header .content-wrapper .bottom .menu-search button {
+          -ms-flex-item-align: right;
+          -ms-grid-row-align: right;
+          align-self: right;
+          margin-top: 10px;
+          padding: 5px 15px;
+          border: none;
+          background: #1d214f;
+          border-radius: 8px;
+          color: white; }
+    header .content-wrapper .sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      -webkit-animation: 1s theme_slideInDown;
+      animation: 1s theme_slideInDown; }
   @media (max-width: 1320px) {
     header {
       padding: 12px 16px 56px 16px; } }

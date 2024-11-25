@@ -1,3 +1,18 @@
+$(function () {
+  new WOW().init();
+});
+
+//header sticky
+$(window).on("scroll", function () {
+  var scrollBarPosition = $(this).scrollTop();
+
+  if (scrollBarPosition > 150) {
+    $(".header-bottom").addClass("sticky");
+  } else {
+    $(".header-bottom").removeClass("sticky");
+  }
+});
+
 // menu-icon toggle
 document
   .querySelector(".mobile-menu-icon")
